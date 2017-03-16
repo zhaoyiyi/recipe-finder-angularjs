@@ -10,6 +10,7 @@ import { routes } from './routes';
 
 import { AppComponent } from './app.component';
 import { SearchComponent, SearchBarComponent, SearchReasultComponent } from './search';
+import { DetailComponent } from './detail';
 import { RecipeService } from './recipe.service';
 
 
@@ -18,5 +19,7 @@ angular.module('app', ['ngMaterial', 'ui.router'])
   .component('search', SearchComponent)
   .component('searchBar', SearchBarComponent)
   .component('searchResult', SearchReasultComponent)
+
+  .component('detail', DetailComponent)
   .service('RecipeService', RecipeService)
   .config(routes)

@@ -1,9 +1,9 @@
 class SearchController {
 
-  constructor(recipeService) {
+  constructor($state, recipeService) {
     this.recipeService = recipeService;
     this.state = recipeService.state;
-    console.log('search controller init');
+    this.$state = $state;
   }
 
   $onInit = () => {
@@ -16,11 +16,12 @@ class SearchController {
   }
   navigateToDetail = (recipe) => {
     this.recipeService.selectRecipe(recipe);
-    this.router.navigate(['/recipe-detail']);
+    this.$state.go('detail');
+    console.log('navigating...');
   }
 }
 
-SearchController.$inject = ['RecipeService'];
+SearchController.$inject = ['$state', 'RecipeService'];
 
 export const SearchComponent = {
   controller: SearchController,  
@@ -32,7 +33,7 @@ export const SearchComponent = {
 
       <search-result 
         recipes="$ctrl.state.searchResult" 
-        navigateToDetail="$ctrl.nativateToDetail">
+        navigate-to-detail="$ctrl.navigateToDetail">
       </search-result>
     </section>
 
