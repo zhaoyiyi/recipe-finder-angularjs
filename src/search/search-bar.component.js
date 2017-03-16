@@ -7,7 +7,7 @@ export const SearchBarComponent = {
       <md-input-container>
         <input mdInput placeholder="find recipe here..." ng-model="searchText">
       </md-input-container>
-      <button md-raised-button type="submit">Search</button>
+      <md-button class="md-raised" type="submit">Search</md-button>
     </form>
   `
 };

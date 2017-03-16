@@ -9,7 +9,7 @@ class SearchController {
     console.log('search controller init', this);
     this.recipeService.getRecipe();
   }
-  onSearch = (text) => {
+  search = (text) => {
     console.log('controller search');
     this.recipeService.getRecipe(text);
   }
@@ -26,7 +26,7 @@ export const SearchComponent = {
   template: `
     <section class="">
       <search-bar 
-        search="$ctrl.onSearch">
+        search="$ctrl.search">
       </search-bar>
 
       <search-result 
@@ -34,6 +34,33 @@ export const SearchComponent = {
         navigateToDetail="$ctrl.nativateToDetail">
       </search-result>
     </section>
+
+    <style>
+      .recipe-list {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: flex-start;
+      justify-content: space-around;
+      }
+      .recipe-card {
+        width: 300px;
+        margin: 0 1rem 1rem;
+      }
+      .recipe-card md-chip {
+        margin: 0.25rem;
+      }
+      img:hover {
+        cursor: pointer;
+      }
+      form {
+        text-align: center;
+        margin: 1rem;
+      }
+      .hint {
+        color: grey;
+        text-align: center;
+      }
+    </style>
   `,
 }
 
