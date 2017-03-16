@@ -3,6 +3,7 @@ class SearchController {
   constructor(recipeService) {
     this.recipeService = recipeService;
     this.state = recipeService.state;
+    console.log('search controller init');
   }
 
   $onInit = () => {
@@ -24,7 +25,7 @@ SearchController.$inject = ['RecipeService'];
 export const SearchComponent = {
   controller: SearchController,  
   template: `
-    <section class="">
+    <section>
       <search-bar 
         search="$ctrl.search">
       </search-bar>
