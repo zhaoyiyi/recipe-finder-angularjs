@@ -6,7 +6,8 @@ export const SearchReasultComponent = {
   template: `
     <div class="recipe-list" ng-show="$ctrl.recipes.length">
       <md-card class="recipe-card"
-                ng-repeat="recipe in $ctrl.recipes">
+        ng-click="$ctrl.navigateToDetail(recipe)"
+        ng-repeat="recipe in $ctrl.recipes">
         <md-card-header>
           <md-card-header-text>
             <h3 class="md-title" style="margin: 0.5em 0">{{recipe.label}}</h3>
@@ -14,7 +15,7 @@ export const SearchReasultComponent = {
           </md-card-header-text>
         </md-card-header>
         
-        <img md-card-image src="{{recipe.image}}" ng-click="$ctrl.navigateToDetail(recipe)">
+        <img md-card-image src="{{recipe.image}}">
         <md-card-content style="display: flex; flex-flow: row wrap">
           <span ng-repeat="label in recipe.healthLabels"
             style="background:#f0f0f0; padding: 0.5em; margin: 0.25em; border-radius: 1em; font-size: 0.75em">

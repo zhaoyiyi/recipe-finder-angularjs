@@ -6,5 +6,4 @@ export function routes($stateProvider) {
   ];
   
   states.map(state => $stateProvider.state(state));
-  console.log('route');
 }

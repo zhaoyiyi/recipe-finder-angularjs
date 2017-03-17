@@ -3343,6 +3343,10 @@ ui-router-core@3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/ui-router-core/-/ui-router-core-3.1.0.tgz#c297e8198631ab2e36892a95d0f9a92c18efbc17"
 
+ui-router@^1.0.0-alpha.3:
+  version "1.0.0-alpha.3"
+  resolved "https://registry.yarnpkg.com/ui-router/-/ui-router-1.0.0-alpha.3.tgz#b29872720228b09af55259e9418f5e14bc07d962"
+
 uid-number@~0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/uid-number/-/uid-number-0.0.6.tgz#0ea10e8035e8eb5b8e4449f06da1c730663baa81"

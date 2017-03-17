@@ -28,7 +28,7 @@ export class RecipeService {
   }
 
   selectRecipe(recipe) {
-    this.currentRecipe.next(recipe);
+    this.state.currentRecipe = recipe;
   }
 
   removeFromShoppingList(recipe) {
@@ -62,7 +62,6 @@ export class RecipeService {
     this.$http.get(`${API_URL}&q=${text}`)
       .then(res => {
         this.state.searchResult = res.data.hits.map(r => this.processData(r.recipe));
-        console.log('got recipes');
       })
   }
 
